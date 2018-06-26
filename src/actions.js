@@ -1,4 +1,4 @@
-import uuid from uuid;
+import uuid from 'uuid';
 
 // TYPY AKCJI
 
@@ -28,21 +28,21 @@ export const editComment = (text, id) => {
 
 export const deleteComment = id => {
 	return {
-		type: DELETE_COMMENT,
+		type: REMOVE_COMMENT,
 		id: id 
 	}
 }
 
-export const thumbUpComment = id => {
+export const thumbUpComment = commentId => {
 	return {
 		type: THUMB_UP_COMMENT,
-		id: id 
+		id: commentId 
 	}
 }
 
-export const thumbDownComment = id => {
+export const thumbDownComment = commentId => {
 	return {
 		type: THUMB_DOWN_COMMENT,
-		id: id 
+		id: commentId 
 	}
 }

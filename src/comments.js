@@ -13,37 +13,34 @@ function comments(state = [], action) {
                 text: action.text,
                 votes: 0
             }
-            , ...state.comments];
+            , ...state]; 
         case EDIT_COMMENT:
-        	return [{
+        	return 
         		state.comments.map(comment => {
 					if (comment.id === action.id) {
 						return {...comment, text: action.text}
 					}
-                })
-        	}];
-       	case REMOVE_COMMENT: 
-       		return [{
+                });
+        case REMOVE_COMMENT: 
+       		return 
        			state.comments.filter(comment => comment.id !== action.id)	
-       		}];
        	case THUMB_UP_COMMENT:
-       		return [{
+       		return 
        			state.comments.map(comment => {
 					if (comment.id === action.id) {
 						return {...comment, votes: comment.votes + 1}
 					}
-                })
-       		}];
+                });
        	case THUMB_DOWN_COMMENT:
-       		return [{
+       		return 
        			state.comments.map(comment => {
 					if (comment.id === action.id) {
 						return {...comment, votes: comment.votes - 1}
 					}
-                })
-       		}];
+                });
        	default:
 			return state;
     }
 };
 
+export default comments;
