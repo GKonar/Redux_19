@@ -30,6 +30,7 @@ function comments(state = [], action) {
 					if (comment.id === action.id) {
 						return {...comment, votes: comment.votes + 1}
 					}
+                return comment
                 });
        	case THUMB_DOWN_COMMENT:
        		return 
@@ -37,6 +38,7 @@ function comments(state = [], action) {
 					if (comment.id === action.id) {
 						return {...comment, votes: comment.votes - 1}
 					}
+                return comment;
                 });
        	default:
 			return state;
@@ -44,3 +46,5 @@ function comments(state = [], action) {
 };
 
 export default comments;
+
+

@@ -33,16 +33,16 @@ export const deleteComment = id => {
 	}
 }
 
-export const thumbUpComment = commentId => {
+export const thumbUpComment = id => {
 	return {
 		type: THUMB_UP_COMMENT,
-		id: commentId 
+		id: id 
 	}
 }
 
-export const thumbDownComment = commentId => {
+export const thumbDownComment = id => {
 	return {
 		type: THUMB_DOWN_COMMENT,
-		id: commentId 
+		id: id 
 	}
 }
