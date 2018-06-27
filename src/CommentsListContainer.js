@@ -6,3 +6,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(CommentsList);
+
+// !! metoda mapStateToProps mapuje state do propsów i przekazuje te propsy do CommentsList!! 
