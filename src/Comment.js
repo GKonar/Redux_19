@@ -1,10 +1,11 @@
 import React from 'react';
 //import { thumbUpComment } from './actions';
 
-const Comment = ({text, votes, id, thumbUpComment, thumbDownComment}) => 
+const Comment = ({text, votesPlus, votesMinus, id, thumbUpComment, thumbDownComment}) => 
 <li>
-	{text} 	<span>votes: {votes}</span>
+	{text} 	<span>votes: {votesPlus}</span>
 			<button onClick={() => thumbUpComment(id)}>Like</button>
+			<span>votes: {votesMinus}</span>
 			<button onClick={() => thumbDownComment(id)}>Don't like</button>
 </li>;
 
