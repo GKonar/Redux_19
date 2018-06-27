@@ -5,11 +5,9 @@ import './index.css';
 import App from './Components/App';
 import reducer from "./reducer";
 import { addComment } from './actions';
-import { createStore, combineReducers } from 'redux';
-import { createLogger } from 'redux-logger';
+import { createStore } from 'redux';
 import DevTools from './DevTools';
 
-const logger = createLogger();
 const store = createStore(
   reducer,
   DevTools.instrument()
@@ -25,6 +23,6 @@ ReactDOM.render(
 // bez niego React Redux nie wie z jakiego źródła ma czerpać dane. 
 // MUSIMY więc opakować komponent App w komponent Provider.
 
-store.dispatch(addComment('pierwszy komentarz'));
-store.dispatch(addComment('drugi komentarz'));
+//store.dispatch(addComment('pierwszy komentarz'));
+//store.dispatch(addComment('drugi komentarz'));
 // !! --Dispatchowanie, czyli wysyłanie informacji o akcji do store

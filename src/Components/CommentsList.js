@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from '../Containers/CommentContainer'; // importuje kontener elementu zamiast zwykłego prezentacyjnego odpowiednika
 
-const CommentsList = ({comments}) => 
+const CommentsList = ({comments, text}) => 
 									<ul>
 										{comments.map(comment => <Comment key={comment.id} {...comment}/>)}
 									</ul>;

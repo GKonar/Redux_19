@@ -8,9 +8,8 @@ const Comment = ({text, votesPlus, votesMinus, id, thumbUpComment, thumbDownComm
 				<button onClick={() => thumbDownComment(id)}>Don't like</button>
 				<br />
 				<button onClick={() => removeComment(id)}>Remove</button>
-				<button onClick={() => addComment(text)}>Add comment</button>
 	</li>
-
+//<button onClick={() => addComment(text)}>Add comment</button>
 
 export default Comment;
 
