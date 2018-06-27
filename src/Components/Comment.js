@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Comment = ({text, votesPlus, votesMinus, id, thumbUpComment, thumbDownComment, removeComment, addComment}) => 
-<div>
 	<li>
 		{text} 	<span>votes: {votesPlus}</span>
 				<button onClick={() => thumbUpComment(id)}>Like</button>
@@ -11,12 +10,12 @@ const Comment = ({text, votesPlus, votesMinus, id, thumbUpComment, thumbDownComm
 				<button onClick={() => removeComment(id)}>Remove</button>
 				<button onClick={() => addComment(text)}>Add comment</button>
 	</li>
-</div>
+
 
 export default Comment;
 
 /*
 komponent prezentacyjny
-Ten komponent zajmie się oczywiście wyświetleniem pojedynczego 
+Ten komponent zajmie się oczywiście wyświetleniem pojedynczego   !--- Zwraca pojedynczy element listy ---!
 komentarza znajdującego się w komponencie z listą komentarzy.
 */

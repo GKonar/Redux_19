@@ -8,3 +8,5 @@ const reducer = combineReducers({
 });
 
 export default reducer;
+
+// Funkcja pomocnicza combineReducers, dzięki której w prostszy sposób możemy łączyć ze sobą reduktory.
