@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './Components/App';
 import reducer from "./reducer";
-import { addComment } from './actions';
 import { createStore } from 'redux';
 import DevTools from './DevTools';
 
