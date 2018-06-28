@@ -2,7 +2,8 @@ import React from 'react';
 
 const Comment = ({text, votesPlus, votesMinus, id, thumbUpComment, thumbDownComment, removeComment, addComment}) => 
 	<li>
-		{text} 	<span>votes: {votesPlus}</span>
+		{text} 	<br />
+				<span>votes: {votesPlus}</span>
 				<button onClick={() => thumbUpComment(id)}>Like</button>
 				<span>votes: {votesMinus}</span>
 				<button onClick={() => thumbDownComment(id)}>Don't like</button>

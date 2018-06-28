@@ -26,7 +26,9 @@ class AddComment extends Component {
           value={this.state.commentText}
           placeholder='Your comment'
         />
+        <button onSubmit={e => this.handleSubmit(e)}>Add Comment</button>
       </form>
+
     );
   }
 }
