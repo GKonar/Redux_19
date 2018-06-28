@@ -8,10 +8,11 @@ class AddComment extends Component {
 
  handleSubmit(e) {
     e.preventDefault();
-    const comment = {commentText : this.state.commentText};
-    this.props.addComment(comment); //jakie propsy, jaki addComment, undefined, nic tu nie przekazuje przez propsy
+    //const comment = this.state.commentText; // mniej elegancko
+    this.props.addComment(this.state.commentText); 
     this.setState({ commentText: '' });
   }
+
 
  changeHandler(e) { 
     this.setState({ commentText : e.target.value });

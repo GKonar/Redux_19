@@ -4,7 +4,7 @@ import AddCommentComponent from '../Components/AddCommentComponent';
 import { addComment } from '../actions';
 
 const mapDispatchToProps = dispatch => ({  //Metoda ta MAPUJE odpowiednie wywołanie akcji do porpsów
-	addComment: () => dispatch(addComment())
+	addComment: (text) => dispatch(addComment(text))
 });
 
 export default connect(null, mapDispatchToProps)(AddCommentComponent);
